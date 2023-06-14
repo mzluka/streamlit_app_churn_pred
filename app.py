@@ -70,6 +70,7 @@ def main():
 
 
     st.sidebar.subheader("Приложение создано для курса Diving into Darkness of Data Science")
+    st.sidebar.image('7.jpg')
     st.sidebar.text("Разработчик - Братковский Е.В.")
     st.markdown(
     """
