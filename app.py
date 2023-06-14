@@ -27,7 +27,7 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
-set_png_as_page_bg('9.jpeg')
+set_png_as_page_bg('9.jpg')
 
 
 classifier_name=['XGBoost', 'Гадание на кофейной гуще']
