@@ -76,7 +76,7 @@ def main():
     """
 <style>
 .sidebar .sidebar-content {
-    background-image: linear-gradient(#cfd3dd,#cfd3dd);
+    background-image: linear-gradient(#ffe599,#ffe599);
     color: white;
 }
 </style>
