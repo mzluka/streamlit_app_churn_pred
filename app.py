@@ -27,7 +27,7 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
-set_png_as_page_bg('7.jpg')
+set_png_as_page_bg('6.jpg')
 
 
 classifier_name=['XGBoost', 'Гадание на кофейной гуще']
@@ -70,7 +70,7 @@ def main():
 
 
     st.sidebar.subheader("Приложение создано для курса Diving into Darkness of Data Science")
-    st.sidebar.image('6.jpg')
+    st.sidebar.image('8.jpg')
     st.sidebar.text("Разработчик - Братковский Е.В.")
     st.markdown(
     """
