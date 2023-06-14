@@ -31,7 +31,7 @@ set_png_as_page_bg('5.jpg')
 
 
 classifier_name=['LGBMClassifier', 'RandomForestClassifier','LogisticRegression']
-option = st.sidebar.selectbox('Выбрать алгоритм для прогноза оттока клиентов из банка', classifier_name)
+option = st.sidebar.selectbox('Выбрать алгоритм для прогноза оттока клиентов', classifier_name)
 st.subheader(option)
 
 
