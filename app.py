@@ -27,7 +27,7 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
-set_png_as_page_bg('5.jpg')
+set_png_as_page_bg('7.jpg')
 
 
 classifier_name=['LGBMClassifier', 'RandomForestClassifier','LogisticRegression']
