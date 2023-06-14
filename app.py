@@ -71,7 +71,17 @@ def main():
 
     st.sidebar.subheader("Приложение создано для курса Diving into Darkness of Data Science")
     st.sidebar.text("Разработчик - Братковский Е.В.")
-
+    st.markdown(
+    """
+<style>
+.sidebar .sidebar-content {
+    background-image: linear-gradient(#2e7bcf,#2e7bcf);
+    color: white;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
     CreditScore = st.slider('Скоринговый балл', 300, 900)
 
