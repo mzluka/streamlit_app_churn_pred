@@ -69,7 +69,7 @@ def main():
 
 
 
-    st.sidebar.subheader("Приложение создано в рамках проекта "ИТ-Академия" по направлению Data Science)
+    st.sidebar.subheader("Приложение создано в рамках проекта "ИТ-Академия" по направлению Data ScienceЭ)
     st.sidebar.image('8.jpg')
     st.sidebar.text("Разработано Слука М.З., ЦБУ 602 г. Лида")
     st.markdown(
