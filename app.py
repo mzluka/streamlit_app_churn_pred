@@ -60,7 +60,7 @@ def main():
     st.title("Прогноз оттока клиентов из банка")
     html_temp = """
     <div style="background-color:white ;padding:10px">
-    <h2 style="color:blue;text-align:center;">Заполните форму для прогноза</h2>
+    <h2 style="color:red;text-align:center;">Заполните форму для прогноза</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -69,7 +69,7 @@ def main():
 
 
 
-    st.sidebar.subheader("Приложение создано в рамках проекта ИТ-Академия по направлению Data Science")
+    st.sidebar.subheader("Приложение создано в рамках проекта IT-Academy по направлению Data Science")
     st.sidebar.image('8.jpg')
     st.sidebar.text("Разработано Слука М.З., ЦБУ 602 г. Лида")
     st.markdown(
@@ -77,7 +77,7 @@ def main():
 <style>
 .sidebar .sidebar-content {
     background-image: linear-gradient(#8993ab,#8993ab);
-    color: white;
+    color: black;
 }
 </style>
 """,
