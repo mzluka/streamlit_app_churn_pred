@@ -27,7 +27,7 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
-set_png_as_page_bg('9.jpg')
+set_png_as_page_bg('5.jpg')
 
 
 classifier_name=['LGBMClassifier', 'RandomForestClassifier','LogisticRegression']
@@ -70,7 +70,7 @@ def main():
 
 
     st.sidebar.subheader("Приложение создано в рамках проекта IT-Academy по направлению Data Science")
-    st.sidebar.image('8.jpg')
+    st.sidebar.image('4.jpg')
     st.sidebar.text("Разработано Слука М.З., ЦБУ 602 г. Лида")
     st.markdown(
     """
