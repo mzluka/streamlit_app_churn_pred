@@ -132,5 +132,15 @@ def main():
     if int(Age)- int(Tenure)< 17:
             st.error('Некорректный ввод данных по возрасту клиента и/или длительности обслуживания в банке')
 
+    
+    if Balance < 10000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
+            st.success('Вероятность оттока составляет более 90%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
+
+    
+    if CreditScore > 400 and EstimatedSalary > 25000 and IsActiveMember == 1 and NumOfProducts > 1 and Age < 60 and Tenure > 3 and Balance > 25000:
+            st.success('Вероятность оттока составляет менее 30%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
+
 if __name__=='__main__':
     main()
