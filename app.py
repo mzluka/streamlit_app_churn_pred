@@ -128,5 +128,9 @@ def main():
         else:
             st.markdown(no_churn_html, unsafe_allow_html= True)
 
+            
+    if int(Age)- int(Tenure)< 17:
+            st.error('Некорректный ввод данных по возрасту клиента и/или длительности обслуживания в банке')
+
 if __name__=='__main__':
     main()
