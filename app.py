@@ -89,18 +89,18 @@ def main():
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол клиента', ['Male', 'Female'])
+    Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст клиента", 18, 95)
+    Age = st.slider("Возраст", 18, 95)
 
-    Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10', '11', '12', '13', '14', '15'])
+    Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10'])
 
     Balance = st.slider("Баланс счёта", 0.00, 250000.00)
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Наличие кредитной БПК", ['0', '1'])
+    HasCrCard = st.selectbox("Наличие кредитной карточки", ['0', '1'])
 
     IsActiveMember = st.selectbox("Активность клиента", ['0', '1'])
 
