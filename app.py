@@ -31,7 +31,7 @@ set_png_as_page_bg('5.jpg')
 
 
 classifier_name=['LGBMClassifier', 'RandomForestClassifier','LogisticRegression']
-option = st.sidebar.selectbox('Евгений Викторович, какой алгоритм запустить?', classifier_name)
+option = st.sidebar.selectbox('Выбрать алгоритм для прогноза оттока клиентов из банка', classifier_name)
 st.subheader(option)
 
 
@@ -51,16 +51,16 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
     else:
         pred=0.30
-        #st.markdown('Наверное, клиент останется в банке, но это не точно да и вообще надо звонить в Битву экстрасенсов.')
+        #st.markdown('Клиент останется в банке')
 
     return float(pred)
 
 
 def main():
-    st.title("Прогноз оттока клиентов")
+    st.title("Прогноз оттока клиентов из банка")
     html_temp = """
     <div style="background-color:white ;padding:10px">
-    <h2 style="color:red;text-align:center;">Заполни форму</h2>
+    <h2 style="color:red;text-align:center;">Заполните форму для прогноза</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -69,9 +69,9 @@ def main():
 
 
 
-    st.sidebar.subheader("Приложение создано для курса Diving into Darkness of Data Science")
+    st.sidebar.subheader("Приложение создано в рамках проекта "ИТ-Академия" по направлению Data Science)
     st.sidebar.image('8.jpg')
-    st.sidebar.text("Разработчик - Братковский Е.В.")
+    st.sidebar.text("Разработано Слука М.З., ЦБУ 602 г. Лида")
     st.markdown(
     """
 <style>
@@ -84,36 +84,36 @@ def main():
     unsafe_allow_html=True,
 )
 
-    CreditScore = st.slider('Скоринговый балл', 300, 900)
+    CreditScore = st.slider('Скоринговый балл', 0, 400)
 
-    Geography = st.selectbox('География/регион', ['France', 'Germany', 'Spain'])
+    Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
+    Gender = st.selectbox('Пол клиента', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст", 10, 95)
+    Age = st.slider("Возраст клиента", 10, 95)
 
-    Tenure = st.selectbox("Стаж", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10', '11', '12', '13', '14', '15'])
+    Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10', '11', '12', '13', '14', '15'])
 
-    Balance = st.slider("Баланс", 0.00, 250000.00)
+    Balance = st.slider("Баланс счёта", 0.00, 250000.00)
 
-    NumOfProducts = st.selectbox('Количество продуктов', ['1', '2', '3', '4'])
+    NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Есть кредитная БПК ?", ['0', '1'])
+    HasCrCard = st.selectbox("Наличие кредитной БПК", ['0', '1'])
 
-    IsActiveMember = st.selectbox("Активный клиент ?", ['0', '1'])
+    IsActiveMember = st.selectbox("Активность клиента", ['0', '1'])
 
-    EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
+    EstimatedSalary = st.slider("Заработная плата", 0.00, 200000.00)
 
     churn_html = """  
               <div style="background-color:#f44336;padding:20px >
-               <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
+               <h2 style="color:red;text-align:center;"> К сожалению, мы теряем клиента...</h2>
                </div>
             """
     no_churn_html = """  
               <div style="background-color:#94be8d;padding:20px >
-               <h2 style="color:green ;text-align:center;"> Ура, клиент остаётся в банке !!!</h2>
+               <h2 style="color:green ;text-align:center;"> Успех, клиент остаётся в банке!</h2>
                </div>
             """
 
