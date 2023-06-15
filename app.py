@@ -124,11 +124,11 @@ def main():
             st.error('Некорректный ввод данных по возрасту клиента')
     
     if CreditScore < 100 and Balance < 5000 and EstimatedSalary < 5000 and IsActiveMember == 0 and Age > 80 and Tenure == 0:
-            st.success('Вероятность оттока составляет более 90%.')
+            st.success('Вероятность оттока составляет более 70%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
     if CreditScore < 200 and Balance < 10000 and EstimatedSalary < 10000 and IsActiveMember == 0 and Age > 70 and Tenure == 1:
-            st.success('Вероятность оттока составляет более 70%.')
+            st.success('Вероятность оттока составляет более 60%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
     if CreditScore < 300 and Balance < 15000 and EstimatedSalary < 15000 and IsActiveMember == 0 and Age > 60 and Tenure == 2:
