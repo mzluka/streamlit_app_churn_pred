@@ -130,7 +130,7 @@ def main():
 
                 
     if int(Age)- int(Tenure)< 17:
-            st.error('Некорректный ввод данных по возрасту клиента и/или длительности обслуживания в банке')
+            st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
 
     
     if Balance < 10000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
