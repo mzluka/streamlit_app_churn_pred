@@ -95,7 +95,7 @@ def main():
 
     Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12','13','14','15'])
 
-    Balance = st.slider("Баланс счёта", 0.00, 25000.00)
+    Balance = st.slider("Баланс счёта", 0.00, 5000.00)
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
@@ -103,7 +103,7 @@ def main():
 
     IsActiveMember = st.selectbox("Активность", ['0', '1'])
 
-    EstimatedSalary = st.slider("Заработная плата", 0.00, 25000.00)
+    EstimatedSalary = st.slider("Заработная плата", 0.00, 5000.00)
 
                 
     churn_html = """  
