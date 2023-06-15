@@ -116,6 +116,10 @@ def main():
                <h2 style="color:green ;text-align:center;"> Успех, клиент остаётся в банке!</h2>
                </div>
             """
+            
+    if int(Age)-int(Tenure)<17:
+        st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
+
 
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
