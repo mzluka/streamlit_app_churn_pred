@@ -42,7 +42,6 @@ model=pickle.load(open("final_xg_model.pkl","rb"))
 le_pik=pickle.load(open("label_encoding_for_gender.pkl","rb"))
 le1_pik=pickle.load(open("label_encoding_for_geo.pkl","rb"))
 
-
 def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary):
     input = np.array([[CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary]]).astype(np.float64)
     if option == 'XGBoost':
@@ -86,10 +85,9 @@ def main():
 
     CreditScore = st.slider('Скоринговый балл', 0, 400)
 
-    Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
+    Geography = st.selectbox('Регион', ['Grodno', 'Oshmyany', 'Lida'])
     Geo = int(le1_pik.transform([Geography]))
-    France = int(le1_pik.transform([Grodno]))
-    
+       
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
