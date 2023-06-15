@@ -154,11 +154,11 @@ def main():
             st.success('Вероятность оттока составляет менее 30%.')
             st.markdown(churn_html, unsafe_allow_html= True)
   
-    if CreditScore > 200 and EstimatedSalary > 10000 and IsActiveMember == 1 and NumOfProducts > 2 and Age < 50 and Tenure > 5 and Balance > 10000:
+    if CreditScore > 200 and EstimatedSalary > 10000 and IsActiveMember == 1 and NumOfProducts > 1 and Age < 50 and Tenure > 5 and Balance > 10000:
             st.success('Вероятность оттока составляет менее 20%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore > 300 and EstimatedSalary > 15000 and IsActiveMember == 1 and NumOfProducts > 2 and Age < 40 and Tenure > 5 and Balance > 20000:
+    if CreditScore > 300 and EstimatedSalary > 15000 and IsActiveMember == 1 and NumOfProducts > 1 and Age < 40 and Tenure > 5 and Balance > 20000:
             st.success('Вероятность оттока составляет менее 10%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
