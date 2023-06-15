@@ -122,8 +122,7 @@ def main():
 
 
     else:
-        if st.button ('Сделать прогноз'):
-    
+        
     
             output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, HasCrCard, IsActiveMember, EstimatedSalary)
             st.success('Вероятность оттока составляет {}'.format(output))
