@@ -137,6 +137,14 @@ def main():
 
     if int(Tenure)> 10:
             st.error('Некорректный ввод данных по продолжительности обслуживания в банке')
+            
+    if CreditScore < 100 and NumOfProducts == 1:
+            st.success('Вероятность оттока составляет более 90%.')
+            st.markdowm(churn_html, unsafe_allow_html= True)
+            
+    if CreditScore > 300 and NumOfProducts == 1:
+            st.success('Вероятность оттока составляет более 30%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
         
     if CreditScore < 100 and Balance < 5000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
             st.success('Вероятность оттока составляет более 90%.')
