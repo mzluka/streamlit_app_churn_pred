@@ -91,7 +91,7 @@ def main():
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст", 10, 95)
+    Age = st.slider("Возраст", 10, 100)
 
     Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12','13','14','15'])
 
@@ -129,7 +129,7 @@ def main():
             st.markdown(no_churn_html, unsafe_allow_html= True)
 
                 
-    if int(Age)< 18:
+    if int(Age)< 18 - int(Age)>92:
             st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
 
     if int(Tenure)> 10:
