@@ -30,7 +30,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LGBMClassifier', 'RandomForestClassifier','LogisticRegression']
+classifier_name=['LightGBM', 'RandomForest','LogisticRegression']
 option = st.sidebar.selectbox('Выбрать алгоритм для прогноза оттока клиентов', classifier_name)
 st.subheader(option)
 
