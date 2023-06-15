@@ -99,7 +99,7 @@ def main():
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Наличие кредитной карточки", ['0', '1'])
+    HasCrCard = st.selectbox("Наличие кредитной карточки", ['Нет', '1'])
 
     IsActiveMember = st.selectbox("Активность", ['0', '1'])
 
