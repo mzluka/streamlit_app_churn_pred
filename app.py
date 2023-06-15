@@ -129,7 +129,7 @@ def main():
             st.markdown(no_churn_html, unsafe_allow_html= True)
 
                 
-    if int(Age)< 18 - int(Age)>92:
+    if int(Age)< 18 & >92:
             st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
 
     if int(Tenure)> 10:
