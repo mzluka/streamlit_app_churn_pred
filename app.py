@@ -83,7 +83,7 @@ def main():
     unsafe_allow_html=True,
 )
 
-    CreditScore = st.slider('Скоринговый балл', 300, 900)
+    CreditScore = st.slider('Скоринговый балл', 0, 400)
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
@@ -95,7 +95,7 @@ def main():
 
     Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12','13','14','15'])
 
-    Balance = st.slider("Баланс счёта", 0.00, 250000.00)
+    Balance = st.slider("Баланс счёта", 0.00, 25000.00)
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
@@ -103,7 +103,7 @@ def main():
 
     IsActiveMember = st.selectbox("Активность", ['0', '1'])
 
-    EstimatedSalary = st.slider("Заработная плата", 0.00, 250000.00)
+    EstimatedSalary = st.slider("Заработная плата", 0.00, 25000.00)
 
                 
     churn_html = """  
@@ -134,6 +134,14 @@ def main():
 
     if int(Tenure)> 10:
             st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
+        
+    if Balance < 10000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
+            st.success('Вероятность оттока составляет более 90%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
+
+    if CreditScore > 400 and EstimatedSalary > 25000 and IsActiveMember == 1 and NumOfProducts > 1 and Age < 60 and Tenure > 3 and Balance > 25000:
+            st.success('Вероятность оттока составляет менее 30%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
 
 
 
