@@ -93,7 +93,7 @@ def main():
 
     Age = st.slider("Возраст", 10, 95)
 
-    Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10'])
+    Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12','13','14','15'])
 
     Balance = st.slider("Баланс счёта", 0.00, 25000.00)
 
@@ -140,6 +140,20 @@ def main():
 
         else:
             st.markdown(no_churn_html, unsafe_allow_html= True)
+
+                
+    if int(Age)- int(Tenure)< 17:
+            st.error('Некорректный ввод данных по возрасту клиента и/или длительности обслуживания в банке')
+
+    
+    if Balance < 10000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
+            st.success('Вероятность оттока составляет более 90%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
+
+    
+    if CreditScore > 400 and EstimatedSalary > 25000 and IsActiveMember == 1 and NumOfProducts > 1 and Age < 60 and Tenure > 3 and Balance > 25000:
+            st.success('Вероятность оттока составляет менее 30%.')
+            st.markdown(churn_html, unsafe_allow_html= True)
 
 
 if __name__=='__main__':
