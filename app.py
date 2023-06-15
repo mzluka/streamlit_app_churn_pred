@@ -91,7 +91,7 @@ def main():
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст", 18, 95)
+    Age = st.slider("Возраст", 10, 95)
 
     Tenure = st.selectbox("Продолжительность обслуживания в банке, лет", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10'])
 
