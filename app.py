@@ -60,7 +60,7 @@ def main():
     st.title("Прогноз оттока клиентов из банка")
     html_temp = """
     <div style="background-color:white ;padding:10px">
-    <h2 style="color:red;text-align:center;">Заполните форму для прогноза</h2>
+    <h2 style="color:red;text-align:center;">Заполните форму по клиенту</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -102,7 +102,7 @@ def main():
 
     HasCrCard = st.selectbox("Наличие кредитной карточки", ['0', '1'])
 
-    IsActiveMember = st.selectbox("Активность клиента", ['0', '1'])
+    IsActiveMember = st.selectbox("Активность", ['0', '1'])
 
     EstimatedSalary = st.slider("Заработная плата", 0.00, 25000.00)
 
