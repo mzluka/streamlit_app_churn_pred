@@ -117,7 +117,7 @@ def main():
                </div>
             """
             
-    if int(Age)-int(Tenure)<17:
+    if int(Age)-int(Tenure)<11:
         st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
 
     if int(Age)> 92:
