@@ -117,17 +117,11 @@ def main():
                </div>
             """
             
-    if int(Age)-int(Tenure)<18:
+    if int(Age)-int(Tenure)<17:
         st.error('Некорректный ввод данных по возрасту клиента и/или продолжительности обслуживания в банке')
-    
-    if int(Age)< 18:
-            st.error('Некорректный ввод данных по возрасту клиента')
 
     if int(Age)> 92:
             st.error('Некорректный ввод данных по возрасту клиента')
-
-    if int(Tenure)> 10:
-            st.error('Некорректный ввод данных по продолжительности обслуживания в банке')
     
     if CreditScore < 100 and Balance < 5000 and EstimatedSalary < 5000 and IsActiveMember == 0 and Age > 80 and Tenure == 0:
             st.success('Вероятность оттока составляет более 90%.')
