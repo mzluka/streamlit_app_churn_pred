@@ -142,11 +142,11 @@ def main():
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore < 200 and Balance < 500 and EstimatedSalary < 1000 and IsActiveMember == 0 and NumOfProducts == 1:
+    if CreditScore < 200 and Balance < 500 and EstimatedSalary < 1000 and IsActiveMember == 0:
             st.success('Вероятность оттока составляет более 70%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore < 300 and Balance < 1000 and EstimatedSalary < 2000 and IsActiveMember == 0 and NumOfProducts == 1:
+    if CreditScore < 300 and Balance < 1000 and EstimatedSalary < 2000 and IsActiveMember == 0:
             st.success('Вероятность оттока составляет более 50%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
