@@ -124,7 +124,7 @@ def main():
     else:
         
     
-            output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, HasCrCard, IsActiveMember, EstimatedSalary)
+            output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
             st.success('Вероятность оттока составляет {}'.format(output))
       
         
