@@ -64,17 +64,6 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("style.css")
-
-with st.expander("label"):
-    st.write("text")
-    st.write("text")
-    st.write("text")
-
 
     st.sidebar.subheader("Приложение создано в рамках проекта IT-Academy по направлению Data Science")
     st.sidebar.image('4.jpg')
