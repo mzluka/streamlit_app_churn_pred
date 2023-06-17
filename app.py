@@ -83,7 +83,7 @@ def main():
     unsafe_allow_html=True,
 )
 
-    CreditScore = st.number_input('Скоринговый балл от 0 до 400', step=1, format="%g"))
+    CreditScore = st.number_input('Скоринговый балл', min_value=50, max_value=400, format="%4.1f")
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
