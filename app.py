@@ -91,19 +91,19 @@ def main():
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст", 18, 95)
+    Age = st.slider('Возраст', 18, 95)
 
-    Tenure = st.slider('Продолжительность обслуживания в банке, лет', 0, 10)
+    Tenure = st.slider('Продолжительность обслуживания в банке', 0, 10)
 
-    Balance = st.slider("Баланс счёта", 0.00, 25000.00)
+    Balance = st.slider('Баланс счёта', 0.00, 25000.00)
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Наличие кредитной карточки", ['0', '1'])
+    HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
 
-    IsActiveMember = st.selectbox("Активность", ['0', '1'])
+    IsActiveMember = st.selectbox('Активность', ['0', '1'])
 
-    EstimatedSalary = st.slider("Заработная плата", 0.00, 25000.00)
+    EstimatedSalary = st.slider('Предполагаемая заработная плата', 0.00, 25000.00)
 
                 
     churn_html = """  
