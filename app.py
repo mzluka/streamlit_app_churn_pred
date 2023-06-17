@@ -93,7 +93,7 @@ def main():
 
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
 
-    Tenure = st.number_input('Продолжительность обслуживания в банке, лет'. min_value=1, max_value=10, format="%d")
+    Tenure = st.number_input('Продолжительность обслуживания в банке, лет', min_value=1, max_value=10, format="%d")
 
     Balance = st.number_input('Баланс счёта', format="%4.2f")
 
