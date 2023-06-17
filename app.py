@@ -1,8 +1,7 @@
 import sklearn
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from lightgbm import LGBMClassifier
+#from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 import streamlit as st
 import pickle
