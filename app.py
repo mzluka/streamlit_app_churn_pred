@@ -50,7 +50,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
     else:
         pred=0.30
-        #st.markdown('Клиент останется в банке')
+        #st.markdown('Клиент остаётся в банке')
 
     return float(pred)
 
@@ -64,8 +64,16 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+local_css("style.css")
 
+with st.expander("label"):
+    st.write("text")
+    st.write("text")
+    st.write("text")
 
 
     st.sidebar.subheader("Приложение создано в рамках проекта IT-Academy по направлению Data Science")
