@@ -83,7 +83,7 @@ def main():
     unsafe_allow_html=True,
 )
 
-    CreditScore = st.number_input('Скоринговый балл')
+    CreditScore = st.number_input('Скоринговый балл от 0 до 400')
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
@@ -91,11 +91,11 @@ def main():
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider('Возраст', 18, 95)
+    Age = st.number_input('Возраст')
 
-    Tenure = st.slider('Продолжительность обслуживания в банке, лет', 0, 10)
+    Tenure = st.number_input('Продолжительность обслуживания в банке, лет')
 
-    Balance = st.slider('Баланс счёта', 0.00, 25000.00)
+    Balance = st.number_input('Баланс счёта')
 
     NumOfProducts = st.selectbox('Количество банковских продуктов', ['1', '2', '3', '4'])
 
@@ -103,7 +103,7 @@ def main():
 
     IsActiveMember = st.selectbox('Активность', ['0', '1'])
 
-    EstimatedSalary = st.slider('Предполагаемая заработная плата', 0.00, 25000.00)
+    EstimatedSalary = st.number_input('Предполагаемая заработная плата')
 
                 
     churn_html = """  
