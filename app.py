@@ -30,15 +30,15 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LightGBM', 'RandomForest', 'LogisticRegression']
-option = st.sidebar.selectbox('Выбрать алгоритм для прогнозирования:', classifier_name)
+classifier_name=['LightGMB', 'RandomForest', 'LogisticRegression']
+option = st.sidebar.selectbox('Выбрать алгоритм для прогнозирования', classifier_name)
 st.subheader(option)
 
 
 
 #Importing model and label encoders
-model=pickle.load(open("RF1_model.pkl","rb"))
-#model_1 = pickle.load(open("RF1_model.pkl","rb"))
+model=pickle.load(open("final_xg_model.pkl","rb"))
+#model_1 = pickle.load(open("final_rf_model.pkl","rb"))
 le_pik=pickle.load(open("label_encoding_for_gender.pkl","rb"))
 le1_pik=pickle.load(open("label_encoding_for_geo.pkl","rb"))
 
