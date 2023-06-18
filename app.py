@@ -86,7 +86,7 @@ def main():
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
          
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
+    Gender = st.selectbox('Пол', ['Мужской', 'Женский'])
     Gen = int(le_pik.transform([Gender]))
 
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
@@ -97,9 +97,9 @@ def main():
 
     NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
 
-    HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
+    HasCrCard = st.selectbox('Наличие кредитной карточки', ['Нет', 'Да'])
 
-    IsActiveMember = st.selectbox('Активность', ['no', 'yes'])
+    IsActiveMember = st.selectbox('Активность', ['Нет', 'Да'])
 
     EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=25000.00, format="%4.2f")
 
