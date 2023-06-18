@@ -85,8 +85,7 @@ def main():
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
-    df.rename(columns={"France": "Grodno", "Germany": "Oshmyany", "Spain": "Lida"}, inplace=True)
-       
+         
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
@@ -100,7 +99,7 @@ def main():
 
     HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
 
-    IsActiveMember = st.selectbox('Активность', ['0', '1'])
+    IsActiveMember = st.selectbox('Активность', ['no', 'yes'])
 
     EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=25000.00, format="%4.2f")
 
