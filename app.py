@@ -1,8 +1,6 @@
 import sklearn
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 from lightgbm import LGBMClassifier
 
 import streamlit as st
@@ -32,7 +30,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LightGMBClassifier', 'RandomForestClassifier', 'LogisticRegressionClassifier']
+classifier_name=['LightGMBClassifier', 'LogisticRegressionClassifier']
 option = st.sidebar.selectbox('Выберите алгоритм для прогнозирования', classifier_name)
 st.subheader(option)
 
@@ -51,9 +49,6 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         prediction = model.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
-    if option == 'RandomForestClassifier':
-        prediction = model_1.predict_proba(input)
-        pred = '{0:.{1}f}'.format(prediction[0][0], 2)
        
     if option == 'LogisticRegression':
         prediction = model_2.predict_proba(input)
