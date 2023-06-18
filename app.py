@@ -84,7 +84,7 @@ def main():
   
     CreditScore = st.number_input('Скоринговый балл', min_value=1, max_value=400, format="%d")
 
-    Geography = st.selectbox('География/регион', ['Минск', 'Брест', 'Могилев'])
+    Geography = st.selectbox('Регион', ['Гродно', 'Ошмяны', 'Лида'])
 
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
     
