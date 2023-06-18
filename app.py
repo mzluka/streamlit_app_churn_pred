@@ -103,14 +103,12 @@ def main():
     else:
         HasCrCard = 1
     
-    IsActive = st.selectbox("Активный клиент ?", ['Нет', 'Да'])
+    IsActive = st.selectbox("Активность клиента", ['Нет', 'Да'])
     
     if IsActive == 'Нет':
         IsActiveMember = 0
     else:
         IsActiveMember = 1
-
-    IsActiveMember = st.selectbox('Активность', ['0', '1'])
 
     EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=25000.00, format="%4.2f")
 
