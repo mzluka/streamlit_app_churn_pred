@@ -108,7 +108,7 @@ def main():
 
     Tenure = st.number_input('Продолжительность обслуживания в банке, лет', min_value=1, max_value=10, format="%d")
 
-    Balance = st.number_input('Баланс счёта',  max_value=25000.00, format="%4.2f")
+    Balance = st.number_input('Баланс счёта',  max_value=5000.00, format="%4.2f")
 
     NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
 
@@ -126,7 +126,7 @@ def main():
     else:
         IsActiveMember = 1
 
-    EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=25000.00, format="%4.2f")
+    EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=5000.00, format="%4.2f")
 
                 
     churn_html = """  
