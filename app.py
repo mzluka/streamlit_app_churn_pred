@@ -61,7 +61,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
     if option == 'AdaBoostClassifier':
-        prediction = model_2.predict_proba(input)
+        prediction = model_3.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
     #else:
