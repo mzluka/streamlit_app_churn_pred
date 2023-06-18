@@ -97,9 +97,9 @@ def main():
 
     NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
 
-    HasCrCard = st.selectbox('Наличие кредитной карточки', ['Нет', 'Да'])
+    HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
 
-    IsActiveMember = st.selectbox('Активность', ['Нет', 'Да'])
+    IsActiveMember = st.selectbox('Активность', ['0', '1'])
 
     EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=25000.00, format="%4.2f")
 
