@@ -87,8 +87,15 @@ def main():
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
+    Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
+    if Gen == 'Женский':
+        Gender = 0
+    else:
+        Gender = 1
+
+Evgeny Bratkovsky, [18.06.2023 11:56]
+Geography = st.selectbox('География/регион', ['Минск', 'Брест', 'Могилев'])
         
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
 
