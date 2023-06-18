@@ -88,6 +88,7 @@ def main():
     Geo = int(le1_pik.transform([Geography]))
          
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
+    
     if Gen == 'Женский':
         Gender = 0
     else:
