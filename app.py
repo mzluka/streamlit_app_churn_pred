@@ -103,6 +103,17 @@ def main():
     NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
 
     HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
+    
+    if HasCrCard == 'Нет':
+        HasCrCard = 0
+    else:
+        HasCrCard = 1
+    
+    IsActive = st.selectbox("Активный клиент ?", ['Нет', 'Да'])
+    if IsActive == 'Нет':
+        IsActiveMember = 0
+    else:
+        IsActiveMember = 1
 
     IsActiveMember = st.selectbox('Активность', ['0', '1'])
 
