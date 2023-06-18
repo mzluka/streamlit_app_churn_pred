@@ -2,6 +2,7 @@ import sklearn
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 from lightgbm import LGBMClassifier
 
 import streamlit as st
