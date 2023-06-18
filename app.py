@@ -92,8 +92,8 @@ def main():
 
     CreditScore = st.number_input('Скоринговый балл', min_value=1, max_value=400, format="%d")
 
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
-    Gen = int(le_pik.transform([Gender]))
+    Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
+    Geo = int(le1_pik.transform([Geography]))
 
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
