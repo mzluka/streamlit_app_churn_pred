@@ -81,10 +81,13 @@ def main():
     unsafe_allow_html=True,
 )
 
-  
+    Geo = int(le1_pik.transform([Geography]))
+
+    Gen = int(le_pik.transform([Gender]))
+        
     CreditScore = st.number_input('Скоринговый балл', min_value=1, max_value=400, format="%d")
 
-    Geo = st.selectbox('Регион', ['Гродно', 'Ошмяны', 'Лида'])
+    Geography = st.selectbox('Регион', ['Гродно', 'Ошмяны', 'Лида'])
     
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
     if Gen == 'Женский':
