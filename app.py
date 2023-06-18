@@ -94,6 +94,9 @@ def main():
 
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
+
+    Gender = st.selectbox('Пол', ['Male', 'Female'])
+    Gen = int(le_pik.transform([Gender]))
         
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
 
