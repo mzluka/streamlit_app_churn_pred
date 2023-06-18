@@ -1,7 +1,6 @@
 import sklearn
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from lightgbm import LGBMClassifier
 
@@ -54,7 +53,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
     if option == 'RandomForestClassifier':
         prediction = model_1.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
-
+       
     if option == 'LogisticRegression':
         prediction = model_2.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
