@@ -2,6 +2,7 @@ import sklearn
 
 #from sklearn.linear_model import LogisticRegression
 #from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 from lightgbm import LGBMClassifier
 
 import streamlit as st
@@ -31,7 +32,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LightGMBClassifier']
+classifier_name=['LightGMBClassifier', 'AdaBoostClassifier']
 option = st.sidebar.selectbox('Выберите алгоритм для прогнозирования', classifier_name)
 st.subheader(option)
 
@@ -41,6 +42,7 @@ st.subheader(option)
 model = pickle.load(open("final_LGBM_model.pkl","rb"))
 #model_1 = pickle.load(open("final_RF_model.pkl","rb"))
 #model_2 = pickle.load(open("final_LR_model.pkl","rb"))
+model_3 = pickle.load(open("final_ADA_model.pkl","rb"))
 le_pik=pickle.load(open("label_encoding_for_gender.pkl","rb"))
 le1_pik=pickle.load(open("label_encoding_for_geo.pkl","rb"))
 
@@ -50,13 +52,17 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         prediction = model.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
-    #if option == 'LogisticRegression':
-        #prediction = model_2.predict_proba(input)
+    #if option == 'RandomForestClassifier':
+        #prediction = model_1.predict_proba(input)
         #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
         
     #if option == 'LogisticRegression':
         #prediction = model_2.predict_proba(input)
         #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
+
+    if option == 'AdaBoostClassifier':
+        prediction = model_2.predict_proba(input)
+        pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
     #else:
         #pred=0.30
