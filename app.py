@@ -88,12 +88,13 @@ def main():
     Geo = int(le1_pik.transform([Geography]))
 
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
-    Gen = int(le_pik.transform([Gender]))
-    
+       
     if Gen == 'Женский':
         Gender = 0
     else:
         Gender = 1
+
+    Gen = int(le_pik.transform([Gender]))
         
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
 
