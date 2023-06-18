@@ -96,7 +96,7 @@ def main():
 
     NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
 
-    HasCrCard = st.selectbox('Наличие кредитной карточки', ['0', '1'])
+    HasCrCard = st.selectbox('Наличие кредитной карточки', ['Нет', 'Да'])
     
     if HasCrCard == 'Нет':
         HasCrCard = 0
