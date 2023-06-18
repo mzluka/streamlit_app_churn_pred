@@ -87,7 +87,6 @@ def main():
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gen = int(le_pik.transform([Gender]))
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
     if Gen == 'Женский':
         Gender = 0
