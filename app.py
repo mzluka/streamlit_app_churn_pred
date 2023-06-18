@@ -85,6 +85,7 @@ def main():
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
+    df.rename(columns={"France": "Grodno", "Germany": "Oshmyany", "Spain": "Lida"}, inplace=True)
        
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
