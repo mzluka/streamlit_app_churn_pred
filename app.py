@@ -87,14 +87,13 @@ def main():
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
          
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
-    Gen = int(le_pik.transform([Gender]))
     Gen = st.selectbox('Пол',  ['Женский', 'Мужской'])
     if Gen == 'Женский':
         Gender = 0
     else:
         Gender = 1
-
+    Gen = int(le_pik.transform([Gender]))
+    
     Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
 
     Tenure = st.number_input('Продолжительность обслуживания в банке, лет', min_value=1, max_value=10, format="%d")
