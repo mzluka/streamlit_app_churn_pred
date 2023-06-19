@@ -123,7 +123,7 @@ def main():
 
     EstimatedSalary = st.slider('Предполагаемая заработная плата',  0, 5000)
 
-    if CreditScore < 100 and Balance < 500 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 0 Tenure == 0:
+    if CreditScore < 100 and Balance < 500 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 0 and Tenure == 0:
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
