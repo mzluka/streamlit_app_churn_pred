@@ -127,6 +127,17 @@ def main():
         IsActiveMember = 1
 
     EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=5000.00, format="%4.2f")
+                   
+    churn_html = """  
+              <div style="background-color:#f44336;padding:20px >
+               <h2 style="color:red;text-align:center;">👎 К сожалению, мы теряем клиента...</h2>
+               </div>
+            """
+    no_churn_html = """  
+              <div style="background-color:#94be8d;padding:20px >
+               <h2 style="color:green ;text-align:center;">👌 Успех, клиент остаётся в банке!</h2>
+               </div>
+            """
 
     if CreditScore < 100 and Balance < 100 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
             st.success('Вероятность оттока составляет более 90%.')
@@ -151,18 +162,6 @@ def main():
     if CreditScore > 300 and EstimatedSalary > 2000 and IsActiveMember == 1 and NumOfProducts > 3 and Age < 40 and Tenure > 3 and Balance > 2000:
             st.success('Вероятность оттока составляет менее 10%.')
             st.markdown(churn_html, unsafe_allow_html= True)
-                
-    churn_html = """  
-              <div style="background-color:#f44336;padding:20px >
-               <h2 style="color:red;text-align:center;">👎 К сожалению, мы теряем клиента...</h2>
-               </div>
-            """
-    no_churn_html = """  
-              <div style="background-color:#94be8d;padding:20px >
-               <h2 style="color:green ;text-align:center;">👌 Успех, клиент остаётся в банке!</h2>
-               </div>
-            """
-
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
