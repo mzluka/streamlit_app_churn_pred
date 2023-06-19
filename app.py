@@ -140,13 +140,7 @@ def main():
             st.success('Вероятность оттока составляет менее 30%.')
             st.markdown(churn_html, unsafe_allow_html= True)
   
-    if CreditScore > 200 and EstimatedSalary > 1000 and IsActiveMember == 1 and Age < 50 and Tenure > 4 and Balance > 1000:
-            st.success('Вероятность оттока составляет менее 20%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore > 300 and EstimatedSalary > 1500 and IsActiveMember == 1 and  Age < 40 and Tenure > 5 and Balance > 2000:
-            st.success('Вероятность оттока составляет менее 10%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
                    
     churn_html = """  
               <div style="background-color:#f44336;padding:20px >
