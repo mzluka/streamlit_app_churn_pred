@@ -60,7 +60,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
     else:
-        option == 'LogisticRegression':
+        option == 'LogisticRegression'
         pred=0.30
         st.markdown('Клиент остаётся в банке')
 
