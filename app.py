@@ -123,15 +123,15 @@ def main():
 
     EstimatedSalary = st.slider('Предполагаемая заработная плата',  0, 5000)
 
-    if CreditScore < 100 and Balance < 500 and EstimatedSalary < 500 and IsActiveMember == 0 and Age > 80 and Tenure == 0:
+    if CreditScore < 100 and Balance < 500 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 0 Tenure == 0:
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore < 200 and Balance < 1000 and EstimatedSalary < 1000 and IsActiveMember == 0 and Age > 70 and Tenure == 1:
+    if CreditScore < 200 and Balance < 1000 and EstimatedSalary < 1000 and IsActiveMember == 0 and NumOfProducts == 0 and Tenure == 1:
             st.success('Вероятность оттока составляет более 70%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore < 300 and Balance < 1500 and EstimatedSalary < 1500 and IsActiveMember == 0 and Age > 60 and Tenure == 2:
+    if CreditScore < 300 and Balance < 1500 and EstimatedSalary < 1500 and IsActiveMember == 0 and NumOfProducts == 0 and and Tenure == 2:
             st.success('Вероятность оттока составляет более 50%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
@@ -143,7 +143,7 @@ def main():
             st.success('Вероятность оттока составляет менее 20%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore > 300 and EstimatedSalary > 1500 and IsActiveMember == 1 and NumOfProducts > 3 and Age < 40 and Tenure > 5 and Balance > 2000:
+    if CreditScore > 300 and EstimatedSalary > 1500 and IsActiveMember == 1 and  Age < 40 and Tenure > 5 and Balance > 2000:
             st.success('Вероятность оттока составляет менее 10%.')
             st.markdown(churn_html, unsafe_allow_html= True)
                    
