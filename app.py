@@ -109,7 +109,7 @@ def main():
 
     Balance = st.number_input('Баланс счёта',  max_value=5000.00, format="%4.2f")
 
-    NumOfProducts = st.number_input('Количество банковских продуктов', min_value=1, max_value=4, format="%d")
+    NumOfProducts = st.slider('Количество банковских продуктов', 0, 4)
 
     HasCrCard = st.selectbox('Наличие кредитной карточки', ['Нет', 'Да'])
     
