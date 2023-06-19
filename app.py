@@ -32,22 +32,22 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LogisticRegression', 'RandomForestClassifier', 'LightGMBClassifier']
+classifier_name=['LightGMBClassifier', 'RandomForestClassifier', 'LogisticRegression']
 option = st.sidebar.selectbox('Выберите алгоритм для прогнозирования', classifier_name)
 st.subheader(option)
 
 
 
 #Importing model and label encoders
-model = pickle.load(open("final_LR_model.pkl","rb"))
+model = pickle.load(open("final_LGBM_model.pkl","rb"))
 model_1 = pickle.load(open("final_RF_model.pkl","rb"))
-model_2 = pickle.load(open("final_LGBM_model.pkl","rb"))
+model_2 = pickle.load(open("final_LR_model.pkl","rb"))
 le_pik=pickle.load(open("label_encoding_for_gender.pkl","rb"))
 le1_pik=pickle.load(open("label_encoding_for_geo.pkl","rb"))
 
 def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary):
     input = np.array([[CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary]]).astype(np.float64)
-    if option == 'LogisticRegression':
+    if option == 'LightGMBClassifier':
         prediction = model.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
@@ -55,13 +55,13 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         prediction = model_1.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
         
-    if option == 'LightGMBClassifier':
-        prediction = model_2.predict_proba(input)
-        pred = '{0:.{1}f}'.format(prediction[0][0], 2)
+    #if option == 'LogisticRegression':
+        #prediction = model_2.predict_proba(input)
+        #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
-    #else:
-        #pred=0.30
-        #st.markdown('Клиент остаётся в банке')
+    else:
+        pred=0.30
+        st.markdown('Клиент остаётся в банке')
 
     return float(pred)
 
