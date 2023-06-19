@@ -123,25 +123,7 @@ def main():
 
     EstimatedSalary = st.slider('Предполагаемая заработная плата',  0, 5000)
 
-    
-    if CreditScore < 100 and Balance < 500 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 0 and Tenure == 0:
-            st.success('Вероятность оттока составляет более 90%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
-
-    if CreditScore < 200 and Balance < 1000 and EstimatedSalary < 1000 and IsActiveMember == 0 and NumOfProducts == 0 and Tenure == 1:
-            st.success('Вероятность оттока составляет более 70%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
-
-    if CreditScore < 300 and Balance < 1500 and EstimatedSalary < 1500 and IsActiveMember == 0 and NumOfProducts == 0 and Tenure == 2:
-            st.success('Вероятность оттока составляет более 50%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
-
-    if CreditScore > 100 and EstimatedSalary > 500 and IsActiveMember == 1 and Age < 60 and Tenure > 3 and Balance > 500:
-            st.success('Вероятность оттока составляет менее 30%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
   
-
-                   
     churn_html = """  
               <div style="background-color:#f44336;padding:20px >
                <h2 style="color:red;text-align:center;">👎 К сожалению, мы теряем клиента...</h2>
