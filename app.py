@@ -32,8 +32,8 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('5.jpg')
 
 
-classifier_name=['LGBMClassifier']
-option = st.sidebar.selectbox('Алгоритм для прогнозирования оттока клиентов', classifier_name)
+classifier_name=['LightGMBClassifier']
+option = st.sidebar.selectbox('Выберите алгоритм для прогнозирования', classifier_name)
 st.subheader(option)
 
 
@@ -70,7 +70,7 @@ def main():
     st.title("Прогноз оттока клиентов из банка")
     html_temp = """
     <div style="background-color:#f3f6f4 ;padding:10px">
-    <h2 style="color:red;text-align:center;">   Введите данные по клиенту:</h2>
+    <h2 style="color:red;text-align:center;">Введите данные по клиенту:</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
