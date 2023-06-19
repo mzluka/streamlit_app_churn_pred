@@ -69,7 +69,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 def main():
     st.title("Прогноз оттока клиентов из банка")
     html_temp = """
-    <div style="background-color:#f3f6f4 ;padding:8px">
+    <div style="background-color:#f3f6f4 ;padding:5px">
     <h2 style="color:black;text-align:center;">Цель проекта: построение модели оттока клиентов банка. 
     Реализованы задачи: препроцессинг, исследовательский анализ данных (EDA), визуализация, построение моделей для прогнозирования оттока на основе Logistic Regression, Random Forest, LightGBM, 
     сравнение качества полученных моделей, развёртывание в StreamLit Cloud. 
