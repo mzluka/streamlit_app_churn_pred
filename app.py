@@ -95,7 +95,7 @@ def main():
     unsafe_allow_html=True,
 )
 
-    CreditScore = st.number_input('Скоринговый балл', min_value=1, max_value=400, format="%d")
+    CreditScore = st.slider('Скоринговый балл', 0, 400)
 
     Geography = st.selectbox('Регион', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
@@ -103,11 +103,11 @@ def main():
     Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
         
-    Age = st.number_input('Возраст', min_value=18, max_value=92, format="%d")
+    Age = st.slider('Возраст', 18, 95)
 
-    Tenure = st.number_input('Продолжительность обслуживания в банке, лет', min_value=1, max_value=10, format="%d")
+    Tenure = st.slider('Продолжительность обслуживания в банке, лет', 1, 10)
 
-    Balance = st.number_input('Баланс счёта',  max_value=5000.00, format="%4.2f")
+    Balance = st.slider('Баланс счёта',  0, 5000)
 
     NumOfProducts = st.slider('Количество банковских продуктов', 0, 4)
 
@@ -125,16 +125,16 @@ def main():
     else:
         IsActiveMember = 1
 
-    EstimatedSalary = st.number_input('Предполагаемая заработная плата',  max_value=5000.00, format="%4.2f")
+    EstimatedSalary = st.slider('Предполагаемая заработная плата',  0, 5000)
 
-    if CreditScore < 100 and Balance < 100 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
+    if CreditScore < 100 and Balance < 100 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 0:
             st.success('Вероятность оттока составляет более 90%.')
             
-    if CreditScore < 200 and Balance < 500 and EstimatedSalary < 1000 and IsActiveMember == 0 and NumOfProducts == 1:
+    if CreditScore < 200 and Balance < 500 and EstimatedSalary < 1000 and IsActiveMember == 0 and NumOfProducts == 0:
             st.success('Вероятность оттока составляет более 70%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
-    if CreditScore < 300 and Balance < 1000 and EstimatedSalary < 2000 and IsActiveMember == 0 and NumOfProducts == 1:
+    if CreditScore < 300 and Balance < 1000 and EstimatedSalary < 2000 and IsActiveMember == 0 and NumOfProducts == 0:
             st.success('Вероятность оттока составляет более 50%.')
             st.markdown(churn_html, unsafe_allow_html= True)
 
