@@ -55,14 +55,13 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         prediction = model_1.predict_proba(input)
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
         
-    #if option == 'LogisticRegression':
-        #prediction = model_2.predict_proba(input)
-        #pred = '{0:.{1}f}'.format(prediction[0][0], 2)
+    if option == 'LogisticRegression':
+        prediction = model_2.predict_proba(input)
+        pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
-    else:
-        option == 'LogisticRegression'
-        pred=0.30
-        st.markdown('Клиент остаётся в банке')
+    #else:
+        #pred=0.30
+        #st.markdown('Клиент остаётся в банке')
 
     return float(pred)
 
