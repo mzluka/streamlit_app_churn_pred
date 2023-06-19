@@ -159,6 +159,9 @@ def main():
     if CreditScore > 300 and EstimatedSalary > 1500 and IsActiveMember == 1 and  Age < 40 and Tenure > 5 and Balance > 2000:
             st.success('Вероятность оттока составляет менее 10%.')
             st.markdown(churn_html, unsafe_allow_html= True)
+    
+    
+    
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
